@@ -13,9 +13,9 @@ export default class Hello extends React.Component<State, Props> {
     render() {
         return (
             <div>
-                <Header />
+                {/* <Header /> */}
                 <h1>Home</h1>
-                <button>Hi</button>
+                {/* <button>Hi</button> */}
                 <Link to='/about/'>About</Link>
             </div>
         )
