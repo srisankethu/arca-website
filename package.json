@@ -1,6 +1,5 @@
 {
-  "name": "gatsby-starter-hello-world",
-  "private": true,
+  "name": "Arweave Gatsby Preact Typescript Starter",
   "description": "A simplified bare-bones starter for Gatsby",
   "version": "0.1.0",
   "license": "MIT",
@@ -14,18 +13,19 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "arweave": "^1.7.1",
     "gatsby": "^2.21.0",
+    "gatsby-plugin-no-sourcemaps": "^2.2.0",
+    "gatsby-plugin-preact": "^4.0.8",
+    "gatsby-plugin-typescript": "^2.4.0",
+    "preact": "^10.4.5",
+    "preact-render-to-string": "^5.1.9",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-helmet": "^6.1.0"
   },
   "devDependencies": {
+    "@types/react-helmet": "^6.0.0",
     "prettier": "2.0.5"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }
