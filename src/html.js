@@ -8,10 +8,6 @@ export default function HTML(props) {
       <head>
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-        {/* <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        /> */}
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
         {props.headComponents}
@@ -25,10 +21,6 @@ export default function HTML(props) {
         />
         {props.postBodyComponents}
       </body>
-      {/* <Helmet>
-        <script async src="https://unpkg.com/arweave/bundles/web.bundle.js"></script>
-      </Helmet> */}
-
     </html>
   )
 }
