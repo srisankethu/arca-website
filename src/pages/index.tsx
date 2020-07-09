@@ -1,23 +1,22 @@
 import React from "react"
 import { Link } from "gatsby"
-import Header from '../components/header'
+import { Box, Heading, Paragraph } from "grommet"
 
-interface State { }
-interface Props { }
+import Layout from "../components/layout"
+import Image from "../components/image"
+import SEO from "../components/seo"
 
-export default class Hello extends React.Component<State, Props> {
-    constructor(props: Props) {
-        super(props)
-    }
+const IndexPage = () => (
+  <Layout>
+    <SEO title="Home" />
+    <Heading>Hi people</Heading>
+    <Paragraph>Welcome to your new Gatsby site.</Paragraph>
+    <Paragraph>Now go build something great.</Paragraph>
+    <Box width={{ max: "300px" }} pad="small">
+      <Image />
+    </Box>
+    <Link to="/page-2/">Go to page 2</Link>
+  </Layout>
+)
 
-    render() {
-        return (
-            <div>
-                {/* <Header /> */}
-                <h1>Home</h1>
-                {/* <button>Hi</button> */}
-                <Link to='/about/'>About</Link>
-            </div>
-        )
-    }
-}
+export default IndexPage

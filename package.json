@@ -1,5 +1,5 @@
 {
-  "name": "Arweave Gatsby Preact Typescript Starter",
+  "name": "arweave-gatsby-preact-starter",
   "description": "A simplified bare-bones starter for Gatsby",
   "version": "0.1.0",
   "license": "MIT",
@@ -16,14 +16,23 @@
     "arweave": "^1.7.1",
     "bulma": "^0.9.0",
     "gatsby": "^2.21.0",
+    "gatsby-image": "^2.4.13",
+    "gatsby-plugin-manifest": "^2.4.18",
     "gatsby-plugin-no-sourcemaps": "^2.2.0",
     "gatsby-plugin-preact": "^4.0.8",
+    "gatsby-plugin-react-helmet": "^3.3.10",
+    "gatsby-plugin-sharp": "^2.6.14",
     "gatsby-plugin-typescript": "^2.4.0",
+    "gatsby-source-filesystem": "^2.3.19",
+    "gatsby-transformer-sharp": "^2.5.7",
+    "grommet": "^2.14.0",
+    "grommet-icons": "^4.4.0",
     "preact": "^10.4.5",
     "preact-render-to-string": "^5.1.9",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "styled-components": "^5.1.1"
   },
   "devDependencies": {
     "@types/react-helmet": "^6.0.0",

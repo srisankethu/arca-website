@@ -1,13 +1,30 @@
+import { Link } from "gatsby"
+import PropTypes from "prop-types"
 import React from "react"
-export default function Header() {
-    return (
-        <nav className="level container px-3 py-3">
-            <div className="level-left">Left</div>
-            <div className="level-right"><p className="level-item"><strong>All</strong></p>
-                <p className="level-item"><a>Published</a></p>
-                <p className="level-item"><a>Drafts</a></p>
-                <p className="level-item"><a>Deleted</a></p>
-                <p className="level-item"><a className="button is-primary">New</a></p></div>
-        </nav>
-    )
+import { Header as GrommetHeader, Heading } from "grommet"
+
+const Header = ({ siteTitle }) => (
+  <GrommetHeader background="brand" justify="center">
+    <Heading>
+      <Link
+        to="/"
+        style={{
+          color: `white`,
+          textDecoration: `none`,
+        }}
+      >
+        {siteTitle}
+      </Link>
+    </Heading>
+  </GrommetHeader>
+)
+
+Header.propTypes = {
+  siteTitle: PropTypes.string,
 }
+
+Header.defaultProps = {
+  siteTitle: ``,
+}
+
+export default Header
