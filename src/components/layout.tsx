@@ -2,9 +2,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
 import "./layout.css"
-import { Grommet, Anchor, Box, Footer, Text } from "grommet"
+import { Grommet, Anchor, Box, Header, Footer, Text, Nav } from "grommet"
 import { grommet } from "grommet/themes"
 
 const Layout = ({ children }) => {
@@ -27,17 +26,24 @@ const Layout = ({ children }) => {
         flexDirection: "column",
       }}
     >
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header background = "brand">
+          <Nav direction="row" background="brand" pad="medium">
+              <Anchor href = "#about" label = "What is ARCA?" />
+              <Anchor href = "#articles" label = "Articles" />
+              <Anchor href = "#projects" label = "Projects" />
+              <Anchor href = "/#" label = "Submit Proposal" />
+          </Nav>
+      </Header>
       <Box as="main" pad="medium" flex overflow="auto">
         {children}
       </Box>
       <Footer background="light-4" justify="center" pad="small">
         <Text textAlign="center" size="small">
-          © {new Date().getFullYear()}, Built with
+          © {new Date().getFullYear()} ARCA DAO. All Rights reserved.
           {` `}
-          <Anchor href="https://www.gatsbyjs.org">Gatsby</Anchor>
-          {` and `}
-          <Anchor href="https://v2.grommet.io">Grommet</Anchor>
+          <Anchor href="/#">Terms of Service</Anchor>
+          {` | `}
+          <Anchor href="/#">Privacy Policy</Anchor>
         </Text>
       </Footer>
     </Grommet>
