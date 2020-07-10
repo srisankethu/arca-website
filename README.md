@@ -1,2 +1,8 @@
-# Gatsby Preact Typescript Arweave Starter 
-* Does exactly what it says on the tin.
+# ARCA WEBSITE
+
+Website currently under development for ARCA DAO
+
+# Instructions
+
+1. `npm install .`
+2. `gatsby develop`
