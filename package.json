@@ -1,6 +1,6 @@
 {
-  "name": "arweave-gatsby-preact-starter",
-  "description": "A simplified bare-bones starter for Gatsby",
+  "name": "arca-website",
+  "description": "Website for ARCA DAO",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
