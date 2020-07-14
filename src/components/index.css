@@ -1,0 +1,42 @@
+
+#top {
+	background-image: url('../images/samplebackground.jpg');
+	padding-bottom: 5%;
+}
+
+#intro {
+	padding-left: 5%;
+}
+
+#articles {
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+
+#projects {
+	background-image: url('../images/samplebackground.jpg');
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+
+#about {
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+
+#permaweb {
+	background-image: url('../images/samplebackground.jpg');
+	padding-top: 5%;
+	padding-bottom: 5%;
+	padding-left: 5%;
+}
+
+#joinUs {
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+
+#submitproposal {
+	background-image: url('../images/samplebackground.jpg');
+	padding-top: 5%;
+}

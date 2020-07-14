@@ -1,21 +1,20 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import "./layout.css"
-import { Grommet, Anchor, Box, Header, Footer, Text, Nav, Button } from "grommet"
+import { Grommet, Anchor, Box, Header, Footer, Text, Heading, Button } from "grommet"
 import { grommet } from "grommet/themes"
 
+
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+
+  const [permawebstatus, setStatus] = useState('Offline')
+  useEffect(() => {
+    setInterval(() => {
+        fetch('http://perma.online/info').then(response => response.json()).then(setStatus('Online')).catch(setStatus('Offline'))
+    }, 30000);
+  }, [])
 
   return (
     <Grommet
@@ -26,19 +25,8 @@ const Layout = ({ children }) => {
         flexDirection: "column",
       }}
     >
-      <Header background = "brand">
-          <Nav direction="row" background="brand" pad="medium">
-              <img src={`logo.png`} width="200" height="60"/>
-              <Anchor href = "#about" label = "What is ARCA?" />
-              <Anchor href = "#articles" label = "Articles" />
-              <Anchor href = "#projects" label = "Projects" />
-              <Anchor href = "/#" label = "Submit Proposal" />
-              <Box pad="xsmall" direction ="row" border = {{ color: "white", size: 'small' }} round = "xsmall" gap="small">
-              <Box pad = "small" background = "status-ok" round = "full"/>
-              <Text>Online</Text>
-              </Box>
-              <Button primary href = "/#" label = "Join Us" />
-          </Nav>
+      <Header background = "neutral-2" justify="center">
+          <Text> LATEST: </Text><Heading margin="small" level="5"> New ARCA DAO Website Launched </Heading>
       </Header>
       <Box as="main" pad="medium" flex overflow="auto">
         {children}

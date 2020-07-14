@@ -1,19 +1,37 @@
-import React from "react"
+import React,{ useState, useEffect } from "react"
 import { Link } from "gatsby"
-import { Box, Heading, Paragraph, Button, Avatar, Text } from "grommet"
+import { Anchor, Box, Heading, Paragraph, Nav, Button, Avatar, Text } from "grommet"
 import {Checkmark} from "grommet-icons"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
+import "../components/index.css"
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <div>
-        <Heading> An Arweave Community Fund A </Heading>
-        <Paragraph> Arca is a Decentralized Autonomous Organisation created to promote decentralization of the Arweave Blockchain ecosystem.</Paragraph>
-        <Button primary label="Join us" href="#joinUs"/>
+    <div id="top">
+        <div>
+            <Nav direction="row" pad="medium">
+                <img src={`logo.png`} width="200" height="60"/>
+                <Anchor href = "#about" label = "What is ARCA?" color="light-1"/>
+                <Anchor href = "#articles" label = "Articles" color="light-1"/>
+                <Anchor href = "#projects" label = "Projects" color="light-1"/>
+                <Anchor href = "/#" label = "Submit Proposal" color="light-1"/>
+                <Box pad="xsmall" direction ="row" border = {{ color: "white", size: 'small' }} round = "xsmall" gap="small">
+                <Box pad = "small" background = "status-ok" round = "full"/>
+                <Text color="light-1">Online</Text>
+                </Box>
+                <Button primary href = "/#" label = "Join Us" color="status-ok"/>
+            </Nav>
+        </div>
+    <div id="intro">
+        <Heading color="light-1"> An Arweave Community Fund A </Heading>
+        <Paragraph color="light-1"> Arca is a Decentralized Autonomous Organisation created to promote decentralization of the Arweave Blockchain ecosystem.</Paragraph>
+        <Button primary label="Join us" href="#joinUs" color="status-ok"/>
+    </div>
     </div>
         
     <div id="articles">
@@ -27,7 +45,7 @@ const IndexPage = () => (
                         <Avatar size = "40px" src="//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80" />
                         <Heading level="5"> John Doe </Heading>
                     </Box>
-                    <Paragraph> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </Paragraph>
+                    <Paragraph color="dark-6"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </Paragraph>
                 </Box>
                 <Box pad = "small" border={{ color: "light-3"}}>
                     <Image fit="cover" src="//v2.grommet.io/assets/Wilderpeople_Ricky.jpg"/>
@@ -36,7 +54,7 @@ const IndexPage = () => (
                         <Avatar size = "40px" src="//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80" />
                         <Heading level="5"> John Doe </Heading>
                     </Box>
-                    <Paragraph> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </Paragraph>
+                    <Paragraph color="dark-6"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </Paragraph>
                 </Box>
                 <Box pad = "small" border={{ color: "light-3"}}>
                     <Image fit="cover" src="//v2.grommet.io/assets/Wilderpeople_Ricky.jpg"/>
@@ -45,7 +63,7 @@ const IndexPage = () => (
                         <Avatar size = "40px" src="//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80" />
                         <Heading level="5"> John Doe </Heading>
                     </Box>
-                    <Paragraph> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </Paragraph>
+                    <Paragraph color="dark-6"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </Paragraph>
                 </Box>
             </Box>
         </Box>
@@ -53,70 +71,77 @@ const IndexPage = () => (
        
     <div id="projects">
         <Box align="center">
-            <Heading> Projects </Heading>
+            <Heading color="light-1"> Projects </Heading>
             <Box direction = "row-responsive" gap = "xlarge">
-                <Box pad="small" border={{ color: "light-3"}}>
+                <Box pad="small" border={{ color: "light-3"}} background="light-1">
                     <img src={`project1.png`} />
                     <Heading level="3"> Feedweave </Heading>
-                    <Paragraph> A Decentralised Community Built Social Network </Paragraph>
+                    <Paragraph color="dark-6"> A Decentralised Community Built Social Network </Paragraph>
                 </Box>
-                <Box pad = "small" border={{ color: "light-3"}}>
+                <Box pad = "small" border={{ color: "light-3"}} background="light-1">
                     <img src={`project2.png`} />
                     <Heading level="3"> Arweave Reverse DNS Gateway </Heading>
-                    <Paragraph> Point a domain you own to your arweave DApp. </Paragraph>
+                    <Paragraph color="dark-6"> Point a domain you own to your arweave DApp. </Paragraph>
                 </Box>
-                <Box pad = "small" border={{ color: "light-3"}}>
+                <Box pad = "small" border={{ color: "light-3"}} background="light-1">
                     <img src={`project3.png`} />
                     <Heading level="3"> Permasnap </Heading>
-                    <Paragraph> Censorship Resistant Moments, embedded on the permaweb. </Paragraph>
+                    <Paragraph color="dark-6"> Censorship Resistant Moments, embedded on the permaweb. </Paragraph>
                 </Box>
             </Box>
         </Box>
     </div>
         
     <div id="about">
+        <Box direction = "row" gap="15%" align="center" justify="center">
+        <Box>
+        <img src={`aboutarca.png`} />
+        </Box>
+        <Box>
         <Heading> About ARCA </Heading>
-        <Paragraph> ARCA is a Decentralised Autonomous Organisation created to promote decentralization of the Arweave Blockchain ecosystem. </Paragraph>
-        <Paragraph> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </Paragraph>
+        <Paragraph color="dark-6"> ARCA is a Decentralised Autonomous Organisation created to promote decentralization of the Arweave Blockchain ecosystem. </Paragraph>
+        <Paragraph color="dark-6"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </Paragraph>
+        </Box>
+        </Box>
     </div>
         
-    <div>
-        <Heading> What is Permaweb? </Heading>
-        <Paragraph> Arweave is a new type of storage that backs data with sustainable and perpetual endowments, allowing users and developers to truly store data forever - for the very first time.</Paragraph>
-        <Paragraph> As a collectively owned hard drive that never forgets, Arweave allows us to remember and preserve valuable information, apps, and history indefinitely. By preserving history, it prevents others from rewriting it.</Paragraph>
+    <div id="permaweb">
+        <Heading color="light-1"> What is Permaweb? </Heading>
+        <Paragraph color="light-1"> Arweave is a new type of storage that backs data with sustainable and perpetual endowments, allowing users and developers to truly store data forever - for the very first time.</Paragraph>
+        <Paragraph color="light-1"> As a collectively owned hard drive that never forgets, Arweave allows us to remember and preserve valuable information, apps, and history indefinitely. By preserving history, it prevents others from rewriting it.</Paragraph>
         <Box direction = "row" gap = "small">
             <Button primary label="Visit ARWEAVE" href="https://arweave.org" target="_blank" color = "lightgreen"></Button>
             <Button primary label="Built on the PERMAWEB" href="https://arweaveapps.com" target="_blank" color = "#1E90FF"></Button>
         </Box>
     </div>
         
-    <div id = "joinUs">
-        <Box direction="row">
-            <Box width = "xlarge">
+    <div id="joinUs">
+        <Box direction="row" gap="large" justify="center">
+            <Box width = "large">
                 <Heading> Why would you join us:</Heading>
                 <ul>
-                    <li style="list-style-type:none"><Checkmark color="green"/> Brainstorm  innovate ideas and build them using decentralized and open source tools.</li>
-                    <li style="list-style-type:none"><Checkmark color="green"/> Get your hands on Decentralized Finance by taking part of a democratic voting process  to ensure we put our DAI towards the right areas - whelther technology grants or operational tasks.</li>
-                    <li style="list-style-type:none"><Checkmark color="green"/> Potentially earn DAI through grants and helping ARCA with operational activities.</li>
-                    <li style="list-style-type:none"><Checkmark color="green"/> Learn the latest in decentralized technology, built around Arweave.</li>
-                    <li style="list-style-type:none"><Checkmark color="green"/> Network your skills with other developers, investors and blockchain experts.</li>
-                    <li style="list-style-type:none"><Checkmark color="green"/> Access to test servers and software for developing proof of concepts.</li>
+                    <li style="list-style-type:none"><Checkmark color="green"/><Text color="dark-6">Brainstorm  innovate ideas and build them using decentralized and open source tools.</Text></li>
+                    <li style="list-style-type:none"><Checkmark color="green"/><Text color="dark-6"> Get your hands on Decentralized Finance by taking part of a democratic voting process  to ensure we put our DAI towards the right areas - whelther technology grants or operational tasks.</Text></li>
+                    <li style="list-style-type:none"><Checkmark color="green"/><Text color="dark-6"> Potentially earn DAI through grants and helping ARCA with operational activities.</Text></li>
+                    <li style="list-style-type:none"><Checkmark color="green"/><Text color="dark-6">Learn the latest in decentralized technology, built around Arweave.</Text></li>
+                    <li style="list-style-type:none"><Checkmark color="green"/><Text color="dark-6"> Network your skills with other developers, investors and blockchain experts.</Text></li>
+                    <li style="list-style-type:none"><Checkmark color="green"/><Text color="dark-6"> Access to test servers and software for developing proof of concepts.</Text></li>
                 </ul>
             </Box>
             <Box pad="medium" background="brand">
-                <Heading> Be part of ARCADAO</Heading>
-                <Paragraph> ARCA is calling all those passionate about technology and Arweave - whelther you are a dev, a network engineer, a social media guru, a writer, a leader, a ower, or even if even you just have the next big, decentralized idea.</Paragraph>
+                <Heading color="light-1"> Be part of ARCADAO</Heading>
+                <Paragraph color="light-1"> ARCA is calling all those passionate about technology and Arweave - whelther you are a dev, a network engineer, a social media guru, a writer, a leader, a ower, or even if even you just have the next big, decentralized idea.</Paragraph>
                 <Button primary label="Join us" />
             </Box>
         </Box>
     </div>
         
-    <div>
+    <div id="submitproposal">
         <Box align="center">
         <img src={`submitproposal.png`} />
-        <Heading> Have a vision for the permaweb? </Heading>
-        <Paragraph> We exist to fund development of anything that makes the permaweb better, anything that makes it easier to work with, and anything that brings more users in. If you have a cool idea you'd like to bring to life, and the time and skills to make it happen, check out our grant application form</Paragraph>
-        <Button label="Submit Proposal" color="light-2"/>
+        <Heading color="light-1"> Have a vision for the permaweb? </Heading>
+        <Paragraph color="light-1"> We exist to fund development of anything that makes the permaweb better, anything that makes it easier to work with, and anything that brings more users in. If you have a cool idea you'd like to bring to life, and the time and skills to make it happen, check out our grant application form</Paragraph>
+        <Button label="Submit Proposal" color="light-1"/>
         </Box>
     </div>
   </Layout>
