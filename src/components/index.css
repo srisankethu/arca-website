@@ -1,6 +1,12 @@
+.card-image {
+	height: 50%;
+	width: 50%;
+}
+
 
 #top {
-	background-image: url('../images/samplebackground.jpg');
+	background-image: url('../images/topbackground.png');
+	background-size: 100% 100%;
 	padding-bottom: 5%;
 }
 
@@ -14,7 +20,8 @@
 }
 
 #projects {
-	background-image: url('../images/samplebackground.jpg');
+	background-image: url('../images/samplebackground.png');
+	background-size: 100% 100%;
 	padding-top: 5%;
 	padding-bottom: 5%;
 }
@@ -25,7 +32,8 @@
 }
 
 #permaweb {
-	background-image: url('../images/samplebackground.jpg');
+	background-image: url('../images/samplebackground.png');
+	background-size: 100% 100%;
 	padding-top: 5%;
 	padding-bottom: 5%;
 	padding-left: 5%;
@@ -37,6 +45,7 @@
 }
 
 #submitproposal {
-	background-image: url('../images/samplebackground.jpg');
+	background-image: url('../images/samplebackground.png');
+	background-size: 100% 100%;
 	padding-top: 5%;
 }
