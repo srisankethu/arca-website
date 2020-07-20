@@ -18,3 +18,7 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.grey-image{
+	filter: grayscale(100%) contrast(50%);
+}

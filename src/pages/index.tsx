@@ -14,7 +14,7 @@ const IndexPage = () => (
     <SEO title="ARCA DAO" />
     <div id="top">
         <div>
-            <Nav direction="row" pad="medium" gap="30%">
+            <Nav direction="row" pad="medium" justify="evenly">
                 <Box direction="row" gap="large">
                 <img src={`logo.png`} width="200" height="60"/>
                 <Anchor href = "#about" label = "What is ARCA?" color="light-1"/>
@@ -47,7 +47,7 @@ const IndexPage = () => (
                     <Heading level="3"> Title of Article 1</Heading>
                     <Box direction = "row" gap = "small">
                         <Avatar size = "40px" src="//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80" />
-                        <Heading level="5"> John Doe </Heading>
+                        <Heading level="5" margin="small"> John Doe </Heading>
                     </Box>
                     <Paragraph color="dark-6"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </Paragraph>
                 </Box>
@@ -56,7 +56,7 @@ const IndexPage = () => (
                     <Heading level="3"> Title of Article 2</Heading>
                     <Box direction = "row" gap = "small">
                         <Avatar size = "40px" src="//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80" />
-                        <Heading level="5"> John Doe </Heading>
+                        <Heading level="5" margin="small"> John Doe </Heading>
                     </Box>
                     <Paragraph color="dark-6"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </Paragraph>
                 </Box>
@@ -65,7 +65,7 @@ const IndexPage = () => (
                     <Heading level="3"> Title of Article 3</Heading>
                     <Box direction = "row" gap = "small">
                         <Avatar size = "40px" src="//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80" />
-                        <Heading level="5"> John Doe </Heading>
+                        <Heading level="5" margin="small"> John Doe </Heading>
                     </Box>
                     <Paragraph color="dark-6"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </Paragraph>
                 </Box>

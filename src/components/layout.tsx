@@ -28,19 +28,29 @@ const Layout = ({ children }) => {
       <Header background = "neutral-2" justify="center">
           <Text> LATEST: </Text><Heading margin="small" level="5"> New ARCA DAO Website Launched </Heading>
       </Header>
-      <Box as="main" pad="medium" flex overflow="auto">
+      <Box as="main" flex overflow="auto">
         {children}
       </Box>
-      <Footer background="light-4" justify="center" pad="small">
-        <img src={`logo.png`} width="200" height="60"/>
-        <Text textAlign="center" size="small">
+      <Footer background="light-4" justify="evenly" pad="small">
+        <Box direction="row" gap="large">
+        <img class="grey-image" src={`logo.png`} width="200" height="60"/>
+        <Text textAlign="center" size="small" color="dark-5" margin="small">
           © {new Date().getFullYear()} ARCA DAO. All Rights reserved.
-          {` `}
-          <Anchor href="/#">Terms of Service</Anchor>
-          {` | `}
-          <Anchor href="/#">Privacy Policy</Anchor>
-          Follow us on <a href="/#"><img src={`facebook.png`}/></a><a href="/#"><img src={`twitter.png`}/></a>
         </Text>
+        <Text textAlign="center" size="small" color="dark-5" margin="small">
+          <Anchor href="/#" color="dark-5">Terms of Service</Anchor>
+          {` | `}
+          <Anchor href="/#" color="dark-5">Privacy Policy</Anchor>
+        </Text>
+        </Box>
+        <Box direction="row">
+        <Text text-align="center" size="small" color="dark-5" margin="small">
+          Follow us on
+        </Text>
+        <Box direction="row" gap="xsmall">
+        <Anchor href="/#"><img src={`facebook.png`}/></Anchor><Anchor href="/#"><img src={`twitter.png`}/></Anchor>
+        </Box>
+        </Box>
       </Footer>
     </Grommet>
   )
