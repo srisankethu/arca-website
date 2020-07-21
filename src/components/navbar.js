@@ -1,0 +1,51 @@
+import React from "react"
+import { Anchor, Box, Menu, Nav, Button, Text, ResponsiveContext} from "grommet"
+import {Menu as MenuIcon} from "grommet-icons"
+
+const NavBar = () => {
+	return(
+		<div>
+            <ResponsiveContext.Consumer>
+        {responsive =>
+          responsive === 'small' ? (
+          	<Nav direction="row" pad="medium" justify="between">
+                <img src={`logo.png`} width="200" height="60"/>
+                <Menu
+                    dropAlign={{"top": "bottom", "right": "right"}}
+                    dropBackground="neutral-2"
+                    icon=<MenuIcon />
+                    items={[
+                        { label: 'What is ARCA?', href: "#about" },
+                        { label: 'Articles', href: "#articles" },
+                        { label: 'Projects', href: "#projects" },
+                        { label: 'Submit Proposal', href: "/#" },
+                        { label: 'Join Us', href: "/#"}
+                    ]}
+                />
+            </Nav>
+            
+          ) : (
+            <Nav direction="row" pad="medium" justify="evenly">
+                <Box direction="row" gap="large">
+                <img src={`logo.png`} width="200" height="60"/>
+                <Anchor href = "#about" label = "What is ARCA?" color="light-1"/>
+                <Anchor href = "#articles" label = "Articles" color="light-1"/>
+                <Anchor href = "#projects" label = "Projects" color="light-1"/>
+                <Anchor href = "/#" label = "Submit Proposal" color="light-1"/>
+                </Box>
+                <Box direction="row" gap="medium">
+                <Box pad="xsmall" direction ="row" border = {{ color: "white", size: 'small' }} round = "xsmall" gap="small">
+                <Box pad = "small" background = "status-ok" round = "full"/>
+                <Text color="light-1">Online</Text>
+                </Box>
+                <Button primary href = "/#" label = "Join Us" color="status-ok"/>
+                </Box>
+            </Nav>
+          )
+        }
+      </ResponsiveContext.Consumer>
+        </div>
+	)
+}
+
+export default NavBar

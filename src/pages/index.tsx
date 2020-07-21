@@ -4,6 +4,7 @@ import { Anchor, Box, Heading, Paragraph, Nav, Button, Avatar, Text } from "grom
 import {Checkmark, LinkNext} from "grommet-icons"
 
 import Layout from "../components/layout"
+import NavBar from "../components/navbar"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
@@ -13,31 +14,14 @@ const IndexPage = () => (
   <Layout>
     <SEO title="ARCA DAO" />
     <div id="top">
-        <div>
-            <Nav direction="row" pad="medium" justify="evenly">
-                <Box direction="row" gap="large">
-                <img src={`logo.png`} width="200" height="60"/>
-                <Anchor href = "#about" label = "What is ARCA?" color="light-1"/>
-                <Anchor href = "#articles" label = "Articles" color="light-1"/>
-                <Anchor href = "#projects" label = "Projects" color="light-1"/>
-                <Anchor href = "/#" label = "Submit Proposal" color="light-1"/>
-                </Box>
-                <Box direction="row" gap="medium">
-                <Box pad="xsmall" direction ="row" border = {{ color: "white", size: 'small' }} round = "xsmall" gap="small">
-                <Box pad = "small" background = "status-ok" round = "full"/>
-                <Text color="light-1">Online</Text>
-                </Box>
-                <Button primary href = "/#" label = "Join Us" color="status-ok"/>
-                </Box>
-            </Nav>
+        <NavBar />
+        <div id="intro">
+            <Heading color="light-1"> An Arweave Community Fund A </Heading>
+            <Paragraph color="light-1"> Arca is a Decentralized Autonomous Organisation created to promote decentralization of the Arweave Blockchain ecosystem.</Paragraph>
+            <Button primary label="Join us" href="#joinUs" color="status-ok"/>
         </div>
-    <div id="intro">
-        <Heading color="light-1"> An Arweave Community Fund A </Heading>
-        <Paragraph color="light-1"> Arca is a Decentralized Autonomous Organisation created to promote decentralization of the Arweave Blockchain ecosystem.</Paragraph>
-        <Button primary label="Join us" href="#joinUs" color="status-ok"/>
     </div>
-    </div>
-        
+
     <div id="articles">
         <Box align="center">
             <Heading> Articles </Heading>
@@ -74,7 +58,7 @@ const IndexPage = () => (
     </div>
        
     <div id="projects">
-        <Box align="center" height="large">
+        <Box align="center">
             <Heading color="light-1"> Projects </Heading>
             <Box direction = "row-responsive" gap = "xlarge">
                 <Box pad="small" border={{ color: "light-3"}} background="light-1" align="center">
@@ -120,8 +104,8 @@ const IndexPage = () => (
     </div>
         
     <div id="joinUs">
-        <Box direction="row" gap="none" justify="center">
-            <Box width = "large" pad = "medium" border={{ color: "light-3" }} round="small">
+        <Box direction="row-responsive" gap="none" justify="center">
+            <Box width = "large" pad = "medium" border={{ color: "light-3" }} round="small" alignSelf="center">
                 <Heading> Why would you join us:</Heading>
                 <ul>
                     <li style="list-style-type:none"><Checkmark color="green"/><Text color="dark-6">Brainstorm  innovate ideas and build them using decentralized and open source tools.</Text></li>
@@ -132,10 +116,10 @@ const IndexPage = () => (
                     <li style="list-style-type:none"><Checkmark color="green"/><Text color="dark-6"> Access to test servers and software for developing proof of concepts.</Text></li>
                 </ul>
             </Box>
-            <Box pad="medium" background="brand" round="small">
+            <Box pad="medium" background="brand" round="small" alignSelf="center" width="large" align="center">
                 <Heading color="light-1"> Be part of ARCADAO</Heading>
                 <Paragraph color="light-1"> ARCA is calling all those passionate about technology and Arweave - whelther you are a dev, a network engineer, a social media guru, a writer, a leader, a ower, or even if even you just have the next big, decentralized idea.</Paragraph>
-                <Button primary label="Join us" />
+                <Button primary label="Join us" size="medium"/>
             </Box>
         </Box>
     </div>

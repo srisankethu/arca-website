@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
 
   return (
     <Grommet
-      theme={grommet}
+      theme={{ global: {breakpoints: {"small": {"value": "1140"}} } } } 
       full
       style={{
         display: "flex",
@@ -31,8 +31,8 @@ const Layout = ({ children }) => {
       <Box as="main" flex overflow="auto">
         {children}
       </Box>
-      <Footer background="light-4" justify="evenly" pad="small">
-        <Box direction="row" gap="large">
+      <Footer background="light-4" justify="evenly" pad="small" direction="row-responsive">
+        <Box direction="row-responsive" gap="large" alignSelf="center">
         <img class="grey-image" src={`logo.png`} width="200" height="60"/>
         <Text textAlign="center" size="small" color="dark-5" margin="small">
           © {new Date().getFullYear()} ARCA DAO. All Rights reserved.
@@ -43,7 +43,7 @@ const Layout = ({ children }) => {
           <Anchor href="/#" color="dark-5">Privacy Policy</Anchor>
         </Text>
         </Box>
-        <Box direction="row">
+        <Box direction="row-responsive" alignSelf="center">
         <Text text-align="center" size="small" color="dark-5" margin="small">
           Follow us on
         </Text>
