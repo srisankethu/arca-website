@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -8,13 +8,6 @@ import { grommet } from "grommet/themes"
 
 
 const Layout = ({ children }) => {
-
-  const [permawebstatus, setStatus] = useState('Offline')
-  useEffect(() => {
-    setInterval(() => {
-        fetch('http://perma.online/info').then(response => response.json()).then(setStatus('Online')).catch(setStatus('Offline'))
-    }, 30000);
-  }, [])
 
   return (
     <Grommet

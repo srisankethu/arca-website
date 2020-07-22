@@ -1,4 +1,4 @@
-import React,{ useState, useEffect } from "react"
+import React from "react"
 import { Link } from "gatsby"
 import { Anchor, Box, Heading, Paragraph, Nav, Button, Avatar, Text } from "grommet"
 import {Checkmark, LinkNext} from "grommet-icons"
