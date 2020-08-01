@@ -4,9 +4,9 @@
 }
 
 #top {
-	background-image: url('../images/topbackground.png');
+	background-image: url('../images/background_1.png');
 	background-size: 100% 100%;
-	padding-bottom: 5%;
+	padding-bottom: 15%;
 }
 
 #intro {
@@ -14,37 +14,37 @@
 }
 
 #articles {
-	padding-top: 5%;
-	padding-bottom: 5%;
+	padding-top: 15%;
+	padding-bottom: 15%;
 }
 
 #projects {
-	background-image: url('../images/samplebackground.png');
+	background-image: url('../images/background_2.png');
 	background-size: 100% 100%;
-	padding-top: 5%;
-	padding-bottom: 5%;
+	padding-top: 15%;
+	padding-bottom: 15%;
 }
 
 #about {
-	padding-top: 5%;
-	padding-bottom: 5%;
+	padding-top: 15%;
+	padding-bottom: 15%;
 }
 
 #permaweb {
-	background-image: url('../images/samplebackground.png');
+	background-image: url('../images/background_3.png');
 	background-size: 100% 100%;
-	padding-top: 5%;
-	padding-bottom: 5%;
+	padding-top: 15%;
+	padding-bottom: 15%;
 	padding-left: 5%;
 }
 
 #joinUs {
-	padding-top: 5%;
-	padding-bottom: 5%;
+	padding-top: 15%;
+	padding-bottom: 15%;
 }
 
 #submitproposal {
-	background-image: url('../images/samplebackground.png');
+	background-image: url('../images/background_4.png');
 	background-size: 100% 100%;
-	padding-top: 5%;
+	padding-top: 15%;
 }

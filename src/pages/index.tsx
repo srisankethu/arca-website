@@ -5,10 +5,14 @@ import {Checkmark, LinkNext} from "grommet-icons"
 
 import Layout from "../components/layout"
 import NavBar from "../components/navbar"
+import Articles from "../components/articles"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import ApiService from "../services/scribe.tsx"
 
 import "../components/index.css"
+
+const arweave = Arweave.init({host: 'arweave.net', port: 443, protocol: 'https'})
 
 const IndexPage = () => (
   <Layout>
@@ -23,38 +27,7 @@ const IndexPage = () => (
     </div>
 
     <div id="articles">
-        <Box align="center">
-            <Heading> Articles </Heading>
-            <Box direction = "row-responsive" gap = "xlarge">
-                <Box pad="small" border={{ color: "light-3"}}>
-                    <Image fit="cover"src="//v2.grommet.io/assets/Wilderpeople_Ricky.jpg"/>
-                    <Heading level="3"> Title of Article 1</Heading>
-                    <Box direction = "row" gap = "small">
-                        <Avatar size = "40px" src="//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80" />
-                        <Heading level="5" margin="small"> John Doe </Heading>
-                    </Box>
-                    <Paragraph color="dark-6"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </Paragraph>
-                </Box>
-                <Box pad = "small" border={{ color: "light-3"}}>
-                    <Image fit="cover" src="//v2.grommet.io/assets/Wilderpeople_Ricky.jpg"/>
-                    <Heading level="3"> Title of Article 2</Heading>
-                    <Box direction = "row" gap = "small">
-                        <Avatar size = "40px" src="//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80" />
-                        <Heading level="5" margin="small"> John Doe </Heading>
-                    </Box>
-                    <Paragraph color="dark-6"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </Paragraph>
-                </Box>
-                <Box pad = "small" border={{ color: "light-3"}}>
-                    <Image fit="cover" src="//v2.grommet.io/assets/Wilderpeople_Ricky.jpg"/>
-                    <Heading level="3"> Title of Article 3</Heading>
-                    <Box direction = "row" gap = "small">
-                        <Avatar size = "40px" src="//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80" />
-                        <Heading level="5" margin="small"> John Doe </Heading>
-                    </Box>
-                    <Paragraph color="dark-6"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </Paragraph>
-                </Box>
-            </Box>
-        </Box>
+        <Articles />
     </div>
        
     <div id="projects">
@@ -129,7 +102,7 @@ const IndexPage = () => (
         <img src={`submitproposal.png`} />
         <Heading color="light-1"> Have a vision for the permaweb? </Heading>
         <Paragraph color="light-1"> We exist to fund development of anything that makes the permaweb better, anything that makes it easier to work with, and anything that brings more users in. If you have a cool idea you'd like to bring to life, and the time and skills to make it happen, check out our grant application form</Paragraph>
-        <Button label="Submit Proposal" color="light-1"/>
+        <Button primary label="Submit Proposal" color="light-1" />
         </Box>
     </div>
   </Layout>

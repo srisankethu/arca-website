@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
 
   return (
     <Grommet
-      theme={{ global: {breakpoints: {"small": {"value": "1140"}} } } } 
+      theme={{ global: { breakpoints: { "small": { "value": "1140" } } }, button: { primary: {"background": {"color": "light-1"} } } } } 
       full
       style={{
         display: "flex",
