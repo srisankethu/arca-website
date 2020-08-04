@@ -34,7 +34,7 @@ const NavBar = () => {
                         { label: 'What is ARCA?', href: "#about" },
                         { label: 'Articles', href: "#articles" },
                         { label: 'Projects', href: "#projects" },
-                        { label: 'Submit Proposal', href: "/#" },
+                        { label: 'Submit Proposal', href: "/submitproposal" },
                         { label: 'Join Us', href: "/#"}
                     ]}
                 />
@@ -47,7 +47,7 @@ const NavBar = () => {
                 <Anchor href = "#about" label = "What is ARCA?" color="light-1"/>
                 <Anchor href = "#articles" label = "Articles" color="light-1"/>
                 <Anchor href = "#projects" label = "Projects" color="light-1"/>
-                <Anchor href = "/#" label = "Submit Proposal" color="light-1"/>
+                <Anchor href = "/submitproposal" label = "Submit Proposal" color="light-1"/>
                 </Box>
                 <Box direction="row" gap="medium">
                 <Box pad="xsmall" direction ="row" border = {{ color: "white", size: 'small' }} round = "xsmall" gap="small">

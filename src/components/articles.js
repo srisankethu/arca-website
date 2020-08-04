@@ -28,7 +28,7 @@ const Articles = () => {
 	const articles_body = [article1Body, article2Body, article3Body]
 	const setArticleBody = [setArtcile1Body, setArticle2Body, setArticle3Body]
 
-	const articles_owners = [article1Owner, article2Owner, article3Owner]
+	const articles_owner = [article1Owner, article2Owner, article3Owner]
 	const setArticleOwner = [setArticle1Owner, setArticle2Owner, setArticle3Owner]
 
 	const parseBody = (body) => {
@@ -65,7 +65,7 @@ const Articles = () => {
                     <Heading level="3"> {articles_title[0]} </Heading>
                     <Box direction = "row" gap = "small">
                         <Avatar size = "40px" src="//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80" />
-                        <Heading level="5" margin="small"> { article1Owner } </Heading>
+                        <Heading level="5" margin="small"> { articles_owner[0] } </Heading>
                     </Box>
                     <Paragraph color="dark-6"> { articles_body[0] } </Paragraph>
                 </Box>
@@ -74,7 +74,7 @@ const Articles = () => {
                     <Heading level="3"> {articles_title[1]}</Heading>
                     <Box direction = "row" gap = "small">
                         <Avatar size = "40px" src="//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80" />
-                        <Heading level="5" margin="small"> { article2Owner } </Heading>
+                        <Heading level="5" margin="small"> { articles_owner[1] } </Heading>
                     </Box>
                     <Paragraph color="dark-6"> { articles_body[1] } </Paragraph>
                 </Box>
@@ -83,7 +83,7 @@ const Articles = () => {
                     <Heading level="3"> {articles_title[2]}</Heading>
                     <Box direction = "row" gap = "small">
                         <Avatar size = "40px" src="//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80" />
-                        <Heading level="5" margin="small"> { article3Owner } </Heading>
+                        <Heading level="5" margin="small"> { articles_owner[2] } </Heading>
                     </Box>
                     <Paragraph color="dark-6"> { articles_body[2] } </Paragraph>
                 </Box>

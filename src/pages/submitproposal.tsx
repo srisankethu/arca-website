@@ -1,6 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
 import { Helmet } from "react-helmet"
+import { Box, Button, TextInput, TextArea } from "grommet"
+import {LinkPrevious} from "grommet-icons"
+
+import TagsInput from 'react-tagsinput'
+import '../components/react-tags.css'
 
 interface State { }
 interface Props { }
@@ -10,6 +15,7 @@ export default class About extends React.Component<State, Props> {
     arweave: any
     constructor(props) {
         super(props)
+        this.state = {tags: []}
     }
 
     checkForArweave = () => {
@@ -23,6 +29,10 @@ export default class About extends React.Component<State, Props> {
         }, 1000)
     }
 
+    handleChange = (tags) => {
+        this.setState({tags})
+    }
+
     async componentDidMount() {
         this.window = window
         this.checkForArweave()
@@ -34,8 +44,14 @@ export default class About extends React.Component<State, Props> {
                 <Helmet>
                     <script async defer src="https://unpkg.com/arweave/bundles/web.bundle.js"></script>
                 </Helmet>
-                <h1>About</h1>
-                <Link to='/'>Home</Link>
+                <Link to='/'><LinkPrevious size='small'/>Back</Link>
+                <Box align="center" gap="large" pad="large">
+                    <h1>Submit Proposal</h1>
+                    <TextInput> </TextInput>
+                    <TextArea size="xlarge"> </TextArea>
+                    <TagsInput value={this.state.tags} onChange={this.handleChange} />
+                    <Button> Submit </Button>
+                </Box>
             </div>
         )
     }
