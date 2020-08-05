@@ -35,7 +35,7 @@ const NavBar = () => {
                         { label: 'Articles', href: "#articles" },
                         { label: 'Projects', href: "#projects" },
                         { label: 'Submit Proposal', href: "/submitproposal" },
-                        { label: 'Join Us', href: "/#"}
+                        { label: 'Join Us', href: "/submitmembership"}
                     ]}
                 />
             </Nav>
@@ -54,7 +54,7 @@ const NavBar = () => {
                 <Box pad = "small" background = {statuscolor} round = "full"/>
                 <Text color="light-1">{permawebstatus}</Text>
                 </Box>
-                <Button primary href = "/#" label = "Join Us" color="status-ok"/>
+                <Button primary href = "/submitmembership" label = "Join Us" color="status-ok"/>
                 </Box>
             </Nav>
           )

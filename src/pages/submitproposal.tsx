@@ -10,7 +10,7 @@ import '../components/react-tags.css'
 interface State { }
 interface Props { }
 
-export default class About extends React.Component<State, Props> {
+export default class SubmitProposal extends React.Component<State, Props> {
     window: any
     arweave: any
     constructor(props) {
@@ -50,7 +50,7 @@ export default class About extends React.Component<State, Props> {
                     <TextInput> </TextInput>
                     <TextArea size="xlarge"> </TextArea>
                     <TagsInput value={this.state.tags} onChange={this.handleChange} />
-                    <Button> Submit </Button>
+                    <Button type="submit" primary label = "Submit" />
                 </Box>
             </div>
         )
