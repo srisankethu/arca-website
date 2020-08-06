@@ -1,46 +1,16 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import { Helmet } from "react-helmet"
-import { Anchor, Box, Button, Form, FormField, Heading, Paragraph, Text, TextInput, TextArea } from "grommet"
-import {LinkPrevious} from "grommet-icons"
+import { Anchor, Box, Button, Form, FormField, Heading, Layer, Paragraph, Text, TextInput, TextArea } from "grommet"
+import {Close, LinkPrevious} from "grommet-icons"
 
-interface State { }
-interface Props { }
+import ArweaveWallet from "../components/arweavewallet.tsx"
 
-export default class SubmitProposal extends React.Component<State, Props> {
-    window: any
-    arweave: any
-    constructor(props) {
-        super(props)
-        this.state = {tags: []}
-    }
+const SubmitMembership = () => {
 
-    checkForArweave = () => {
-        setTimeout(() => {
-            if (!this.window.Arweave) {
-                return this.checkForArweave()
-            } else {
-                this.arweave = this.window.Arweave.init()
-                console.log(this.arweave)
-            }
-        }, 1000)
-    }
-
-    handleChange = (tags) => {
-        this.setState({tags})
-    }
-
-    async componentDidMount() {
-        this.window = window
-        this.checkForArweave()
-    }
-
-    render() {
-        return (
+  const [show, setShow] = useState()
+  return (
             <div>
-                <Helmet>
-                    <script async defer src="https://unpkg.com/arweave/bundles/web.bundle.js"></script>
-                </Helmet>
                 <Link to='/'><LinkPrevious size='small'/>Back</Link>
                 <Box direction="column" align="center">
                 <Box>
@@ -88,11 +58,22 @@ export default class SubmitProposal extends React.Component<State, Props> {
                         <Heading level = "5"> Don't forget to keep in touch with us on Twitter </Heading>
                         <Anchor to="https://twitter.com/ARCA_DAO">https://twitter.com/ARCA_DAO</Anchor><br/><br/>
 
-                        <Button type="submit" primary label="Submit" />
+                        <Button type="submit" primary label="Submit" onClick={() => setShow(true)} />
                     </Form>
+                    {show && (
+                        <Layer
+                            onEsc={() => setShow(false)}
+                            onClickOutside={() => setShow(false)}
+                        >
+                        <Button icon=<Close /> onClick={() => setShow(false)} alignSelf="end"/>
+                        <ArweaveWallet />
+                        </Layer>
+                    )}
+
                 </Box>
                 </Box>
             </div>
         )
-    }
 }
+
+export default SubmitMembership
