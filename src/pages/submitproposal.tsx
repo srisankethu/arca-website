@@ -7,6 +7,7 @@ import TagsInput from 'react-tagsinput'
 import '../components/react-tags.css'
 
 import ArweaveWallet from "../components/arweavewallet.tsx"
+import { walletState } from "../components/arweavewalletState.tsx"
 
 var createReactClass = require('create-react-class')
 
@@ -20,7 +21,6 @@ const SubmitProposal = () => {
   }
 
   const onSubmit = () => {
-      setShow(true)
       var arweave = createReactClass({render: Arweave})
       console.log(arweave)
       console.log(ArweaveWallet)

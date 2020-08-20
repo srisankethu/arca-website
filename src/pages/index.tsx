@@ -12,8 +12,6 @@ import ApiService from "../services/scribe.tsx"
 
 import "../components/index.css"
 
-const arweave = Arweave.init({host: 'arweave.net', port: 443, protocol: 'https'})
-
 const IndexPage = () => (
   <Layout>
     <SEO title="ARCA DAO" />
