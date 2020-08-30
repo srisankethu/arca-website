@@ -42,7 +42,7 @@ const NavBar = () => {
             
           ) : (
             <Nav direction="row" pad="medium" justify="evenly">
-                <Box direction="row" gap="large">
+                <Box direction="row" gap="large" align="center">
                 <img src={`logo.png`} width="200" height="60"/>
                 <Anchor href = "#about" label = "What is ARCA?" color="light-1"/>
                 <Anchor href = "#articles" label = "Articles" color="light-1"/>

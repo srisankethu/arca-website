@@ -11,7 +11,13 @@ const SubmitMembership = () => {
   const [show, setShow] = useState()
   return (
             <div>
-                <Link to='/'><LinkPrevious size='small'/>Back</Link>
+                <Link to='/'>
+                <Box direction="row" gap="small" pad = "medium"> 
+                    <LinkPrevious size = "medium" />
+                    <Text> Back </Text>
+
+                </Box>
+                </Link>
                 <Box direction="column" align="center">
                 <Box>
                 <Heading> Interested in joining ARCA? An Arweave DAO </Heading>

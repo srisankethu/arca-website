@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
-import { Box, Button, Layer, TextInput, TextArea } from "grommet"
+import { Box, Button, Layer, Text, TextInput, TextArea } from "grommet"
 import {Close, LinkPrevious} from "grommet-icons"
 
 import TagsInput from 'react-tagsinput'
@@ -28,7 +28,13 @@ const SubmitProposal = () => {
 
   return (
             <div>
-                <Link to='/'><LinkPrevious size='small'/>Back</Link>
+                <Link to='/'>
+                <Box direction="row" gap="small" pad = "medium"> 
+                    <LinkPrevious size = "medium" />
+                    <Text> Back </Text>
+
+                </Box>
+                </Link>
                 <Box align="center" gap="large" pad="large">
                     <h1>Submit Proposal</h1>
                     <TextInput> </TextInput>

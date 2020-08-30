@@ -62,30 +62,30 @@ const Articles = () => {
             <Box direction = "row-responsive" gap = "xlarge">
                 <Box pad="small" border={{ color: "light-3"}}>
                     <Image fit="cover"src="//v2.grommet.io/assets/Wilderpeople_Ricky.jpg"/>
-                    <Heading level="3"> {articles_title[0]} </Heading>
+                    <Heading level="2"> {articles_title[0]} </Heading>
                     <Box direction = "row" gap = "small">
                         <Avatar size = "40px" src="//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80" />
-                        <Heading level="5" margin="small"> { articles_owner[0] } </Heading>
+                        <Heading level="4" margin="small"> { articles_owner[0] } </Heading>
                     </Box>
-                    <Paragraph color="dark-6"> { articles_body[0] } </Paragraph>
+                    <Paragraph size="large" color="dark-6"> { articles_body[0] } </Paragraph>
                 </Box>
                 <Box pad = "small" border={{ color: "light-3"}}>
                     <Image fit="cover" src="//v2.grommet.io/assets/Wilderpeople_Ricky.jpg"/>
-                    <Heading level="3"> {articles_title[1]}</Heading>
+                    <Heading level="2"> {articles_title[1]}</Heading>
                     <Box direction = "row" gap = "small">
                         <Avatar size = "40px" src="//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80" />
-                        <Heading level="5" margin="small"> { articles_owner[1] } </Heading>
+                        <Heading level="4" margin="small"> { articles_owner[1] } </Heading>
                     </Box>
-                    <Paragraph color="dark-6"> { articles_body[1] } </Paragraph>
+                    <Paragraph size="large" color="dark-6"> { articles_body[1] } </Paragraph>
                 </Box>
                 <Box pad = "small" border={{ color: "light-3"}}>
                     <Image fit="cover" src="//v2.grommet.io/assets/Wilderpeople_Ricky.jpg"/>
-                    <Heading level="3"> {articles_title[2]}</Heading>
+                    <Heading level="2"> {articles_title[2]}</Heading>
                     <Box direction = "row" gap = "small">
                         <Avatar size = "40px" src="//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80" />
-                        <Heading level="5" margin="small"> { articles_owner[2] } </Heading>
+                        <Heading level="4" margin="small"> { articles_owner[2] } </Heading>
                     </Box>
-                    <Paragraph color="dark-6"> { articles_body[2] } </Paragraph>
+                    <Paragraph size="large" color="dark-6"> { articles_body[2] } </Paragraph>
                 </Box>
             </Box>
         </Box>
