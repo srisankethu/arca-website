@@ -33,7 +33,7 @@ const ArweaveWallet = () => {
             <Helmet>
                 <script async defer src="https://unpkg.com/arweave/bundles/web.bundle.js"></script>
             </Helmet>
-            <Box align="center" gap="large" pad="large">
+            <Box align="center" gap="large" pad="large" background="brand">
                 <Form>
                     <label> Upload your Arweave wallet </label><br/><br/>
                     <input type="file" onChange={handleInputChange}/><br/><br/>

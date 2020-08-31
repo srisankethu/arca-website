@@ -8,14 +8,17 @@ import ArweaveWallet from "../components/arweavewallet.tsx"
 
 const SubmitMembership = () => {
 
-  const [show, setShow] = useState()
+  const [show, setShow] = useState();
+
+  const onSubmit = () => {
+      setShow(true);
+  }
   return (
             <div>
                 <Link to='/'>
                 <Box direction="row" gap="small" pad = "medium"> 
                     <LinkPrevious size = "medium" />
                     <Text> Back </Text>
-
                 </Box>
                 </Link>
                 <Box direction="column" align="center">
@@ -64,7 +67,7 @@ const SubmitMembership = () => {
                         <Heading level = "5"> Don't forget to keep in touch with us on Twitter </Heading>
                         <Anchor to="https://twitter.com/ARCA_DAO">https://twitter.com/ARCA_DAO</Anchor><br/><br/>
 
-                        <Button type="submit" primary label="Submit" onClick={() => setShow(true)} />
+                        <Button type="submit" primary label="Submit" onClick={() => onSubmit()} />
                     </Form>
                     {show && (
                         <Layer

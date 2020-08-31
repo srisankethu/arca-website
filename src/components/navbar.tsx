@@ -7,7 +7,7 @@ const NavBar = () => {
 	const [permawebstatus, setStatus] = useState('Offline')
 	const [statuscolor, setColor] = useState('status-error')
     useEffect(() => {
-        fetch('http://perma.online/info').then(response => response.json()).then(() => {
+        fetch('https://perma.online/info').then(response => response.json()).then(() => {
         	setStatus('Online');
         	setColor('status-ok');
         }).catch( () => {

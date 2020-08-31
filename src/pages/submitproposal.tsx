@@ -21,9 +21,7 @@ const SubmitProposal = () => {
   }
 
   const onSubmit = () => {
-      var arweave = createReactClass({render: Arweave})
-      console.log(arweave)
-      console.log(ArweaveWallet)
+      setShow(true);
   }
 
   return (

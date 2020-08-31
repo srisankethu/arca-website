@@ -69,8 +69,8 @@ const IndexPage = () => (
         <Paragraph size="large" color="light-1"> Arweave is a new type of storage that backs data with sustainable and perpetual endowments, allowing users and developers to truly store data forever - for the very first time.</Paragraph>
         <Paragraph size="large" color="light-1"> As a collectively owned hard drive that never forgets, Arweave allows us to remember and preserve valuable information, apps, and history indefinitely. By preserving history, it prevents others from rewriting it.</Paragraph>
         <Box direction = "column" gap = "small" width="medium">
-            <Button primary label="Visit ARWEAVE" href="https://arweave.org" target="_blank" color = "lightgreen" icon=<LinkNext color="light-1"/> reverse="true"/>
-            <Button primary label="Built on the PERMAWEB" href="https://arweaveapps.com" target="_blank" color = "#1E90FF" icon=<LinkNext color="light-1"/> reverse="true"/>
+            <Button primary label="Visit ARWEAVE" href="https://arweave.org" target="_blank" color = "lightgreen" gap = "xlarge" icon=<LinkNext color="light-1"/> reverse="true"/>
+            <Button primary label="Built on the PERMAWEB" href="https://arweaveapps.com" target="_blank" color = "#1E90FF" gap = "medium" icon=<LinkNext color="light-1"/> reverse="true"/>
         </Box>
     </div>
         

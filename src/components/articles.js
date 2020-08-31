@@ -63,7 +63,7 @@ const Articles = () => {
                 <Box pad="small" border={{ color: "light-3"}}>
                     <Image fit="cover"src="//v2.grommet.io/assets/Wilderpeople_Ricky.jpg"/>
                     <Heading level="2"> {articles_title[0]} </Heading>
-                    <Box direction = "row" gap = "small">
+                    <Box direction = "row" gap = "small" align="center">
                         <Avatar size = "40px" src="//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80" />
                         <Heading level="4" margin="small"> { articles_owner[0] } </Heading>
                     </Box>
@@ -72,7 +72,7 @@ const Articles = () => {
                 <Box pad = "small" border={{ color: "light-3"}}>
                     <Image fit="cover" src="//v2.grommet.io/assets/Wilderpeople_Ricky.jpg"/>
                     <Heading level="2"> {articles_title[1]}</Heading>
-                    <Box direction = "row" gap = "small">
+                    <Box direction = "row" gap = "small" align="center">
                         <Avatar size = "40px" src="//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80" />
                         <Heading level="4" margin="small"> { articles_owner[1] } </Heading>
                     </Box>
@@ -81,7 +81,7 @@ const Articles = () => {
                 <Box pad = "small" border={{ color: "light-3"}}>
                     <Image fit="cover" src="//v2.grommet.io/assets/Wilderpeople_Ricky.jpg"/>
                     <Heading level="2"> {articles_title[2]}</Heading>
-                    <Box direction = "row" gap = "small">
+                    <Box direction = "row" gap = "small" align="center">
                         <Avatar size = "40px" src="//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80" />
                         <Heading level="4" margin="small"> { articles_owner[2] } </Heading>
                     </Box>
