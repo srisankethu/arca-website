@@ -38,7 +38,7 @@ const SubmitProposal = () => {
                     <TextInput> </TextInput>
                     <TextArea size="xlarge"> </TextArea>
                     <TagsInput value={tags} onChange={handleChange} />
-                    <Button type="submit" primary label="Submit" onClick={() => onSubmit()} />
+                    <Button type="submit" primary label=<b>Submit</b> onClick={() => onSubmit()} />
                     {show && (
                         <Layer
                             onEsc={() => setShow(false)}

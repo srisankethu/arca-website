@@ -67,7 +67,7 @@ const SubmitMembership = () => {
                         <Heading level = "5"> Don't forget to keep in touch with us on Twitter </Heading>
                         <Anchor to="https://twitter.com/ARCA_DAO">https://twitter.com/ARCA_DAO</Anchor><br/><br/>
 
-                        <Button type="submit" primary label="Submit" onClick={() => onSubmit()} />
+                        <Button type="submit" primary label=<b>Submit</b> onClick={() => onSubmit()} />
                     </Form>
                     {show && (
                         <Layer

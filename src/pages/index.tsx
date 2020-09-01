@@ -20,7 +20,7 @@ const IndexPage = () => (
         <div id="intro">
             <Heading color="light-1"> An Arweave Community Fund A </Heading>
             <Paragraph size="large" color="light-1"> Arca is a Decentralized Autonomous Organisation created to promote decentralization of the Arweave Blockchain ecosystem.</Paragraph>
-            <Button primary label="Join us" href="#joinUs" color="status-ok"/>
+            <Button primary label=<b>Join us</b> href="#joinUs" color="status-ok"/>
         </div>
     </div>
 
@@ -69,8 +69,8 @@ const IndexPage = () => (
         <Paragraph size="large" color="light-1"> Arweave is a new type of storage that backs data with sustainable and perpetual endowments, allowing users and developers to truly store data forever - for the very first time.</Paragraph>
         <Paragraph size="large" color="light-1"> As a collectively owned hard drive that never forgets, Arweave allows us to remember and preserve valuable information, apps, and history indefinitely. By preserving history, it prevents others from rewriting it.</Paragraph>
         <Box direction = "column" gap = "small" width="medium">
-            <Button primary label="Visit ARWEAVE" href="https://arweave.org" target="_blank" color = "lightgreen" gap = "xlarge" icon=<LinkNext color="light-1"/> reverse="true"/>
-            <Button primary label="Built on the PERMAWEB" href="https://arweaveapps.com" target="_blank" color = "#1E90FF" gap = "medium" icon=<LinkNext color="light-1"/> reverse="true"/>
+            <Button primary label=<b>Visit ARWEAVE</b> href="https://arweave.org" target="_blank" color = "lightgreen" gap = "xlarge" icon=<LinkNext color="light-1"/> reverse="true"/>
+            <Button primary label=<b>Built on the PERMAWEB</b> href="https://arweaveapps.com" target="_blank" color = "#1E90FF" gap = "medium" icon=<LinkNext color="light-1"/> reverse="true"/>
         </Box>
     </div>
         
@@ -79,18 +79,18 @@ const IndexPage = () => (
             <Box width = "large" pad = "medium" border={{ color: "light-3" }} round="small" alignSelf="center">
                 <Heading> Why would you join us:</Heading>
                 <ul>
-                    <li style="list-style-type:none"><Checkmark color="green"/><Text size="large" color="dark-6">Brainstorm  innovate ideas and build them using decentralized and open source tools.</Text></li>
-                    <li style="list-style-type:none"><Checkmark color="green"/><Text size="large" color="dark-6"> Get your hands on Decentralized Finance by taking part of a democratic voting process  to ensure we put our DAI towards the right areas - whelther technology grants or operational tasks.</Text></li>
-                    <li style="list-style-type:none"><Checkmark color="green"/><Text size="large" color="dark-6"> Potentially earn DAI through grants and helping ARCA with operational activities.</Text></li>
-                    <li style="list-style-type:none"><Checkmark color="green"/><Text size="large" color="dark-6">Learn the latest in decentralized technology, built around Arweave.</Text></li>
-                    <li style="list-style-type:none"><Checkmark color="green"/><Text size="large" color="dark-6"> Network your skills with other developers, investors and blockchain experts.</Text></li>
-                    <li style="list-style-type:none"><Checkmark color="green"/><Text size="large" color="dark-6"> Access to test servers and software for developing proof of concepts.</Text></li>
+                    <li style="list-style-type:none"><Checkmark color="green"/><Text size="large" color="dark-6">Brainstorm  innovate ideas and build them using decentralized and open source tools.</Text></li><br/>
+                    <li style="list-style-type:none"><Checkmark color="green"/><Text size="large" color="dark-6"> Get your hands on Decentralized Finance by taking part of a democratic voting process  to ensure we put our DAI towards the right areas - whelther technology grants or operational tasks.</Text></li><br/>
+                    <li style="list-style-type:none"><Checkmark color="green"/><Text size="large" color="dark-6"> Potentially earn DAI through grants and helping ARCA with operational activities.</Text></li><br/>
+                    <li style="list-style-type:none"><Checkmark color="green"/><Text size="large" color="dark-6">Learn the latest in decentralized technology, built around Arweave.</Text></li><br/>
+                    <li style="list-style-type:none"><Checkmark color="green"/><Text size="large" color="dark-6"> Network your skills with other developers, investors and blockchain experts.</Text></li><br/>
+                    <li style="list-style-type:none"><Checkmark color="green"/><Text size="large" color="dark-6"> Access to test servers and software for developing proof of concepts.</Text></li><br/>
                 </ul>
             </Box>
             <Box pad="medium" background="brand" round="small" alignSelf="center" width="large" align="center">
                 <Heading color="light-1"> Be part of ARCADAO</Heading>
                 <Paragraph size="large" color="light-1"> ARCA is calling all those passionate about technology and Arweave - whelther you are a dev, a network engineer, a social media guru, a writer, a leader, a ower, or even if even you just have the next big, decentralized idea.</Paragraph>
-                <Button primary label="Join us" size="medium"/>
+                <Button primary label=<b>Join us</b> size="large"/>
             </Box>
         </Box>
     </div>
@@ -100,7 +100,7 @@ const IndexPage = () => (
         <img src={`submitproposal.png`} />
         <Heading color="light-1"> Have a vision for the permaweb? </Heading>
         <Paragraph size="large" color="light-1"> We exist to fund development of anything that makes the permaweb better, anything that makes it easier to work with, and anything that brings more users in. If you have a cool idea you'd like to bring to life, and the time and skills to make it happen, check out our grant application form</Paragraph>
-        <Button primary label="Submit Proposal" color="light-1" />
+        <Button primary label=<b>Submit Proposal</b> size="large" color="light-1" />
         </Box>
     </div>
   </Layout>
