@@ -11,7 +11,12 @@ const SubmitMembership = () => {
   const [show, setShow] = useState();
 
   const onSubmit = () => {
-      setShow(true);
+      if(sessionStorage.getItem("login")){
+          ;
+      }
+      else{
+          setShow(true);
+      }
   }
   return (
             <div>

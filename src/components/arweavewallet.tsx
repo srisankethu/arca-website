@@ -24,8 +24,10 @@ const ArweaveWallet = () => {
         reader.readAsText(event.target.files[0])
     }
 
-    const getFunc = () => {
-        console.log("In Arweave Wallet")
+    const onSumbit = () => {
+        if(login){
+            sessionStorage.setItem("login", true)
+        }
     }
 
     return (
@@ -37,7 +39,7 @@ const ArweaveWallet = () => {
                 <Form>
                     <label> Upload your Arweave wallet </label><br/><br/>
                     <input type="file" onChange={handleInputChange}/><br/><br/>
-                    <input type="submit" value = "Upload" />
+                    <input type="submit" value = "Upload" onsubmit={onSubmit}/>
                 </Form>
             </Box>
         </div>

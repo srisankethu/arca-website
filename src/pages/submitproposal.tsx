@@ -21,7 +21,12 @@ const SubmitProposal = () => {
   }
 
   const onSubmit = () => {
-      setShow(true);
+      if(sessionStorage.getItem("login")){
+          ;
+      }
+      else{
+          setShow(true);
+      }
   }
 
   return (
