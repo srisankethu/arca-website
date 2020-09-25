@@ -13,7 +13,13 @@ var createReactClass = require('create-react-class')
 
 const SubmitProposal = () => {
 
-  const [show, setShow] = useState()
+  window.addEventListener('storage', function(){
+      if(sessionStorage.getItem("login")){
+          setShow(false);
+      }
+  });
+
+  const [show, setShow] = useState(false)
   const [tags, setTags] = useState([])
 
   const handleChange = (updatedTags) => {

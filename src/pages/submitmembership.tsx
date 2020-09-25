@@ -8,7 +8,13 @@ import ArweaveWallet from "../components/arweavewallet.tsx"
 
 const SubmitMembership = () => {
 
-  const [show, setShow] = useState();
+  window.addEventListener('storage', function(){
+      if(sessionStorage.getItem("login")){
+          setShow(false);
+      }
+  });
+  
+  const [show, setShow] = useState(false);
 
   const onSubmit = () => {
       if(sessionStorage.getItem("login")){
