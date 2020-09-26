@@ -7,7 +7,6 @@ import TagsInput from 'react-tagsinput'
 import '../components/react-tags.css'
 
 import {ArweaveWallet, submitTransaction} from "../components/arweavewallet.tsx"
-import { walletState } from "../components/arweavewalletState.tsx"
 
 var createReactClass = require('create-react-class')
 

@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 import { Helmet } from "react-helmet"
 import { Box, Button, Form, TextInput, TextArea } from "grommet"
 import Arweave from 'arweave/web'
-import walletState from "../components/arweavewalletState.tsx"
 
 const arweave = Arweave.init({host: 'arweave.net', port: 443, protocol: 'https'})
 
