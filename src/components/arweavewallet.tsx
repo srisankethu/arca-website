@@ -7,17 +7,32 @@ import walletState from "../components/arweavewalletState.tsx"
 
 const arweave = Arweave.init({host: 'arweave.net', port: 443, protocol: 'https'})
 
+const submitTransaction = async (data, key, tag) => {
+    let transaction = await arweave.createTransaction(data, sessionStorage.getItem("key"));
+    transaction.addTag('app', 'arca')
+    transaction.addTag('type', tag)
+    await arweave.transactions.sign(transaction, key);
+
+    let uploader = await arweave.transactions.getUploader(transaction);
+
+    while (!uploader.isComplete) {
+        await uploader.uploadChunk();
+        alert(`${uploader.pctComplete}% complete, ${uploader.uploadedChunks}/${uploader.totalChunks}`);
+    }
+}
+
 const ArweaveWallet = () => {
 
     const [login, setLogin] = useState(false)
+    const [key, setKey] = useState()
 
     const handleInputChange = event => {
 
-        console.log(event.target.files[0])
         const reader = new FileReader()
         reader.onload = async (event) => {
             arweave.wallets.jwkToAddress(JSON.parse(reader.result)).then((address) => {
                setLogin(true)
+               setKey(event.target.files[0])
             });
         }
 
@@ -27,6 +42,7 @@ const ArweaveWallet = () => {
     const onSubmit = () => {
         if(login){
             sessionStorage.setItem("login", true)
+            sessionStorage.setItem("key", key)
         }
     }
 
@@ -46,4 +62,4 @@ const ArweaveWallet = () => {
     )
 }
 
-export default ArweaveWallet
+export { ArweaveWallet, submitTransaction };

@@ -6,7 +6,7 @@ import {Close, LinkPrevious} from "grommet-icons"
 import TagsInput from 'react-tagsinput'
 import '../components/react-tags.css'
 
-import ArweaveWallet from "../components/arweavewallet.tsx"
+import {ArweaveWallet, submitTransaction} from "../components/arweavewallet.tsx"
 import { walletState } from "../components/arweavewalletState.tsx"
 
 var createReactClass = require('create-react-class')
@@ -28,7 +28,7 @@ const SubmitProposal = () => {
 
   const onSubmit = () => {
       if(sessionStorage.getItem("login")){
-          ;
+          submitTransaction(JSON.stringify(document.getElementById("proposal-form")), sessionStorage.getItem("key"), "proposal-form")
       }
       else{
           setShow(true);
@@ -45,6 +45,7 @@ const SubmitProposal = () => {
                 </Box>
                 </Link>
                 <Box align="center" gap="large" pad="large">
+                  <Form id="proposal-form">
                     <h1>Submit Proposal</h1>
                     <TextInput> </TextInput>
                     <TextArea size="xlarge"> </TextArea>
@@ -59,6 +60,7 @@ const SubmitProposal = () => {
                         <ArweaveWallet />
                         </Layer>
                     )}
+                  </Form>
                 </Box>
             </div>
         )

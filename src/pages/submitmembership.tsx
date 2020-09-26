@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet"
 import { Anchor, Box, Button, Form, FormField, Heading, Layer, Paragraph, Text, TextInput, TextArea } from "grommet"
 import {Close, LinkPrevious} from "grommet-icons"
 
-import ArweaveWallet from "../components/arweavewallet.tsx"
+import {ArweaveWallet, submitTransaction} from "../components/arweavewallet.tsx"
 
 const SubmitMembership = () => {
 
@@ -18,7 +18,7 @@ const SubmitMembership = () => {
 
   const onSubmit = () => {
       if(sessionStorage.getItem("login")){
-          ;
+          submitTransaction(JSON.stringify(document.getElementById("membership-form")), sessionStorage.getItem("key"), "membership-form")
       }
       else{
           setShow(true);
@@ -41,7 +41,7 @@ const SubmitMembership = () => {
                 </Box>
                 
                 <Box gap="large" pad="large">
-                    <Form>
+                    <Form id="membership-form">
                         <FormField label = "What's your discord handle?">
                             <TextInput />
                         </FormField>
