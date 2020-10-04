@@ -90,7 +90,7 @@ const IndexPage = () => (
             <Box pad="medium" background="brand" round="small" alignSelf="center" width="large" align="center">
                 <Heading color="light-1"> Be part of ARCADAO</Heading>
                 <Paragraph size="large" color="light-1"> ARCA is calling all those passionate about technology and Arweave - whelther you are a dev, a network engineer, a social media guru, a writer, a leader, a ower, or even if even you just have the next big, decentralized idea.</Paragraph>
-                <Button primary label=<b>Join us</b> size="large"/>
+                <Button primary label=<b>Join us</b> href="/submitmembership" size="large"/>
             </Box>
         </Box>
     </div>
@@ -100,7 +100,7 @@ const IndexPage = () => (
         <img src={`submitproposal.png`} />
         <Heading color="light-1"> Have a vision for the permaweb? </Heading>
         <Paragraph size="large" color="light-1"> We exist to fund development of anything that makes the permaweb better, anything that makes it easier to work with, and anything that brings more users in. If you have a cool idea you'd like to bring to life, and the time and skills to make it happen, check out our grant application form</Paragraph>
-        <Button primary label=<b>Submit Proposal</b> size="large" color="light-1" />
+        <Button primary label=<b>Submit Proposal</b> href="/submitproposal" size="large" color="light-1" />
         </Box>
     </div>
   </Layout>
