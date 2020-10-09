@@ -7,17 +7,12 @@ import Arweave from 'arweave/web'
 const arweave = Arweave.init({host: 'arweave.net', port: 443, protocol: 'https'})
 
 const submitTransaction = async (data, key, tag) => {
-    let transaction = await arweave.createTransaction(data, sessionStorage.getItem("key"));
+    let transaction = await arweave.createTransaction({ data: data}, JSON.parse(key));
     transaction.addTag('app', 'arca')
     transaction.addTag('type', tag)
-    await arweave.transactions.sign(transaction, key);
+    await arweave.transactions.sign(transaction, JSON.parse(key));
 
-    let uploader = await arweave.transactions.getUploader(transaction);
-
-    while (!uploader.isComplete) {
-        await uploader.uploadChunk();
-        alert(`${uploader.pctComplete}% complete, ${uploader.uploadedChunks}/${uploader.totalChunks}`);
-    }
+    const response = await arweave.transactions.post(transaction);
 }
 
 const ArweaveWallet = () => {
@@ -31,7 +26,7 @@ const ArweaveWallet = () => {
         reader.onload = async (event) => {
             arweave.wallets.jwkToAddress(JSON.parse(reader.result)).then((address) => {
                setLogin(true)
-               setKey(event.target.files[0])
+               setKey(event.target.result)
             });
         }
 
