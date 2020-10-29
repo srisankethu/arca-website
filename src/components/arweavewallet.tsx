@@ -13,6 +13,12 @@ const submitTransaction = async (data, key, tag) => {
     await arweave.transactions.sign(transaction, JSON.parse(key));
 
     const response = await arweave.transactions.post(transaction);
+    if(response.status == 200){
+        alert("Your transaction has been posted!");
+    }
+    else{
+        alert("Your transaction has failed!")
+    }
 }
 
 const ArweaveWallet = () => {
@@ -37,6 +43,7 @@ const ArweaveWallet = () => {
         if(login){
             sessionStorage.setItem("login", true)
             sessionStorage.setItem("key", key)
+            alert("You are logged in!")
         }
     }
 
